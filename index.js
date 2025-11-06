@@ -25,7 +25,7 @@ const corsOptions = {
     origin : "https://lively-kringle-7180c6.netlify.app",                                   // Have to read 
     credentials: true,
 }
-app.use(cors(corsOptions));  // Have to read 
+app.use(cors());  // Have to read 
 
 const PORT = process.env.PORT || 8000;
 
