@@ -21,11 +21,14 @@ app.use(cookieParser());
 
 
 const corsOptions = {
-    // origin: "http://localhost:5173", 
-    origin : "https://lively-kringle-7180c6.netlify.app",                                   // Have to read 
-    credentials: true,
-}
-app.use(cors());  // Have to read 
+  origin: [
+    "http://localhost:5173",
+    "https://ubiquitous-tanuki-c6b008.netlify.app", // your actual Netlify app
+  ],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));  // Have to read 
 
 const PORT = process.env.PORT || 8000;
 
